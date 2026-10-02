@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FDF6F0">
+  <meta name="description" content="Healthy Yoga Studio membership dashboard">
+  <title>Healthy Yoga Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Quicksand:wght@300..700&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+    <symbol id="icon-flower" viewBox="0 0 40 40"><path d="M20 19c-7-7-5-13 0-14 5 1 7 7 0 14Zm1 1c1-10 6-13 10-10 2 5-1 10-10 10Zm0 1c8-6 13-4 14 1-2 5-8 6-14-1Zm-2 1c9 2 11 7 8 11-5 1-10-2-8-11Zm-1-1c6 8 4 13-1 14-5-2-6-8 1-14Zm1-2c-2 9-7 11-11 8-1-5 2-10 11-8Zm1-2c-8 6-13 4-14-1 2-5 8-6 14 1Zm1 0C12 15 10 10 13 6c5-1 10 2 8 11Z"/></symbol>
+    <symbol id="icon-leaf" viewBox="0 0 32 32"><path d="M26 5C14 5 6 10 6 20c0 4 3 7 7 7C23 27 27 17 26 5Z"/><path d="M5 28c5-8 10-12 17-17"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="icon-dots" viewBox="0 0 28 8"><circle cx="4" cy="4" r="2"/><circle cx="14" cy="4" r="2"/><circle cx="24" cy="4" r="2"/></symbol>
+    <symbol id="icon-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></symbol>
+    <symbol id="icon-member" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/></symbol>
+    <symbol id="icon-package" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="M3 8v9l9 5 9-5V8M12 13v9M7.5 5.5l9 5"/></symbol>
+    <symbol id="icon-sale" viewBox="0 0 24 24"><path d="M5 3h14l-2 18H7L5 3Z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+    <symbol id="icon-journal" viewBox="0 0 24 24"><path d="M5 3h15v18H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M7 8h9M7 12h9M7 16h6M7 3v18"/></symbol>
+  </svg>
+
+  <div class="ambient-leaf ambient-leaf-one" aria-hidden="true"><svg><use href="#icon-leaf"/></svg></div>
+  <div class="ambient-leaf ambient-leaf-two" aria-hidden="true"><svg><use href="#icon-leaf"/></svg></div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Healthy Yoga Studio, beranda">
+        <svg class="brand-mark" viewBox="0 0 64 64" width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Siluet meditasi lotus">
+          <circle cx="32" cy="18" r="6" fill="#E8A0BF"/>
+          <path d="M32 26C24 32 20 42 20 50h24c0-8-4-18-12-24Z" fill="#E8A0BF"/>
+          <path d="M14 52q18 8 36 0-18 4-36 0Z" fill="#C77DA0"/>
+          <path d="M10 30q-4-6 0-12 4 6 0 12Zm44 0q4-6 0-12-4 6 0 12Z" fill="#D4B5D9"/>
+          <path d="M17 47q-8-4-7-12 8 2 10 9m27 3q8-4 7-12-8 2-10 9" fill="none" stroke="#D4B5D9" stroke-linecap="round" stroke-width="2"/>
+        </svg>
+        <span class="brand-copy"><strong>Healthy<br>Yoga Studio</strong><small>breathe in ✿</small></span>
+      </a>
+      <nav class="nav primary-nav" aria-label="Navigasi utama" role="tablist">
+        <button class="nav-tab is-active" id="tab-dashboard" type="button" role="tab" aria-selected="true" aria-controls="view-dashboard" data-view="dashboard"><svg class="nav-icon" aria-hidden="true"><use href="#icon-dashboard"/></svg>Dashboard</button>
+        <button class="nav-tab" id="tab-members" type="button" role="tab" aria-selected="false" aria-controls="view-members" data-view="members"><svg class="nav-icon" aria-hidden="true"><use href="#icon-member"/></svg>Members</button>
+        <button class="nav-tab" id="tab-packages" type="button" role="tab" aria-selected="false" aria-controls="view-packages" data-view="packages"><svg class="nav-icon" aria-hidden="true"><use href="#icon-package"/></svg>Packages</button>
+        <button class="nav-tab" id="tab-sales" type="button" role="tab" aria-selected="false" aria-controls="view-sales" data-view="sales"><svg class="nav-icon" aria-hidden="true"><use href="#icon-sale"/></svg>Sales</button>
+        <button class="nav-tab" id="tab-journals" type="button" role="tab" aria-selected="false" aria-controls="view-journals" data-view="journals"><svg class="nav-icon" aria-hidden="true"><use href="#icon-journal"/></svg>Journals</button>
+      </nav>
+      <div class="sidebar-footer">
+        <p class="sidebar-date-label">Hari ini</p>
+        <div class="sidebar-date" id="today-label"></div>
+        <p class="greeting">hello, Abin ✿</p>
+      </div>
+    </aside>
+
+    <div class="content">
+    <main class="main-content">
+      <section class="view is-visible" id="view-dashboard" role="tabpanel" aria-labelledby="tab-dashboard">
+        <div class="page-heading">
+          <div><p class="eyebrow">YOUR STUDIO, IN BLOOM <span id="dashboard-period"></span></p><h1>Ruang sehatmu</h1><p class="subheading">Pelan-pelan, semua yang penting ada di sini.</p></div>
+          <button class="button button-secondary" type="button" data-action="refresh-dashboard" aria-label="Muat ulang ringkasan"><svg class="icon" aria-hidden="true"><use href="#icon-flower"/></svg><span>Refresh</span></button>
+        </div>
+        <div class="metric-grid">
+          <article class="metric metric-pink"><svg class="metric-flower" aria-hidden="true"><use href="#icon-flower"/></svg><span class="metric-label">MEMBER AKTIF</span><strong id="metric-active">—</strong><span class="metric-note">tumbuh bersama studio</span></article>
+          <article class="metric metric-lilac"><svg class="metric-flower" aria-hidden="true"><use href="#icon-leaf"/></svg><span class="metric-label">SALES BULAN INI</span><strong id="metric-sales">—</strong><span class="metric-note">semua sudah lunas</span></article>
+          <article class="metric metric-peach"><svg class="metric-flower" aria-hidden="true"><use href="#icon-flower"/></svg><span class="metric-label">PENDAPATAN BULAN INI</span><strong id="metric-revenue">—</strong><span class="metric-note">DPP sebelum PPN</span></article>
+          <article class="metric metric-sage"><svg class="metric-flower" aria-hidden="true"><use href="#icon-leaf"/></svg><span class="metric-label">PPN BULAN INI</span><strong id="metric-tax">—</strong><span class="metric-note">pajak keluaran</span></article>
+        </div>
+        <section class="content-section dashboard-expiring-section">
+          <div class="section-heading"><div><p class="eyebrow">A LITTLE REMINDER</p><h2>Member akan expired</h2></div><span class="count-pill" id="expiring-count">0</span></div>
+          <div class="soft-card"><div class="table-wrap"><table class="data-table"><thead><tr><th>Member</th><th>Berakhir</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="dashboard-expiring"><tr><td colspan="4" class="empty-cell">Memuat data...</td></tr></tbody></table></div></div>
+        </section>
+        <section class="content-section">
+          <div class="section-heading"><div><p class="eyebrow">LITTLE WINS</p><h2>Sales terbaru</h2></div><button class="text-button" type="button" data-go-view="sales">Lihat semua <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></button></div>
+          <div class="soft-card"><div class="table-wrap"><table class="data-table"><thead><tr><th>No. sales</th><th>Member</th><th>Paket</th><th>Tanggal</th><th>Total</th></tr></thead><tbody id="dashboard-sales"><tr><td colspan="5" class="empty-cell">Memuat sales...</td></tr></tbody></table></div></div>
+        </section>
+      </section>
+
+      <section class="view" id="view-members" role="tabpanel" aria-labelledby="tab-members" hidden>
+        <div class="page-heading"><div><p class="eyebrow">OUR LOVELY COMMUNITY</p><h1>Members</h1><p class="subheading">Setiap perjalanan sehat dimulai dari satu napas.</p></div><button class="button button-primary" type="button" data-action="new-member" aria-label="Tambah member"><svg class="icon" aria-hidden="true"><use href="#icon-plus"/></svg><span>Tambah member</span></button></div>
+        <section class="content-section">
+          <div class="toolbar"><label class="search-field"><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg><input id="member-search" type="search" placeholder="Cari nama, kode, email..." autocomplete="off"></label><span class="toolbar-result" id="member-count"></span></div>
+          <div class="soft-card"><div class="table-wrap"><table class="data-table"><thead><tr><th>Kode</th><th>Nama</th><th>Email</th><th>Phone</th><th>Join date</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="members-table"><tr><td colspan="7" class="empty-cell">Memuat member...</td></tr></tbody></table></div></div>
+          <div class="empty-state" id="members-empty" hidden><svg class="empty-yoga" viewBox="0 0 96 76" aria-hidden="true"><circle cx="48" cy="17" r="8"/><path d="M48 27c-9 7-13 17-13 27h26c0-10-4-20-13-27Z"/><path d="M20 57q28 18 56 0-28 8-56 0Z"/><path d="M16 34q-8-9 0-18 8 9 0 18Zm64 0q8-9 0-18-8 9 0 18Z"/></svg><p>Belum ada member, nih~</p><span>Yuk, tambahin yang pertama ✿</span></div>
+        </section>
+      </section>
+
+      <section class="view" id="view-packages" role="tabpanel" aria-labelledby="tab-packages" hidden>
+        <div class="page-heading"><div><p class="eyebrow">FIND YOUR FLOW</p><h1>Membership packages</h1><p class="subheading">Pilih ritme yang paling cocok untukmu.</p></div><button class="button button-primary" type="button" data-action="new-package" aria-label="Tambah paket"><svg class="icon" aria-hidden="true"><use href="#icon-plus"/></svg><span>Tambah paket</span></button></div>
+        <div class="package-toolbar"><label class="select-field"><span>Lihat paket</span><select id="package-filter"><option value="all">Semua paket</option><option value="true">Aktif</option><option value="false">Archived</option></select></label><span class="toolbar-result" id="package-count"></span></div>
+        <div class="package-grid" id="packages-grid" aria-live="polite"></div>
+        <div class="empty-state" id="packages-empty" hidden><svg class="empty-yoga" viewBox="0 0 96 76" aria-hidden="true"><path d="M48 13c-8 0-12 7-8 13 4 5 12 5 16 0 4-6 0-13-8-13Z"/><path d="M48 30 27 55h42L48 30Z"/><path d="M15 59q33 15 66 0-33 7-66 0Z"/></svg><p>Belum ada paket, nih~</p><span>Siapkan ruang untuk perjalanan baru.</span></div>
+      </section>
+
+      <section class="view" id="view-sales" role="tabpanel" aria-labelledby="tab-sales" hidden>
+        <div class="page-heading"><div><p class="eyebrow">A FRESH START</p><h1>New membership</h1><p class="subheading">Pembayaran lunas di muka, lalu kembali ke matras.</p></div></div>
+        <section class="content-section">
+          <form id="sale-form" class="sale-layout">
+            <div class="soft-card sale-fields">
+              <div class="section-heading"><div><p class="eyebrow">MEMBERSHIP DETAILS</p><h2>Catat transaksi</h2></div><span class="paid-pill"><svg class="icon" aria-hidden="true"><use href="#icon-check"/></svg>Lunas</span></div>
+              <div class="form-grid">
+                <label class="field"><span>Member <i>*</i></span><select name="member_id" id="sale-member" required><option value="">Pilih member</option></select></label>
+                <label class="field"><span>Paket <i>*</i></span><select name="package_id" id="sale-package" required><option value="">Pilih paket</option></select></label>
+                <label class="field"><span>Tanggal mulai <i>*</i></span><input type="date" name="start_date" id="sale-start" required></label>
+                <fieldset class="field payment-field"><legend>Metode bayar <i>*</i></legend><div class="radio-pills"><label><input type="radio" name="payment_method" value="cash" checked><span>Cash</span></label><label><input type="radio" name="payment_method" value="transfer"><span>Transfer</span></label></div></fieldset>
+                <label class="field field-full"><span>Catatan kecil</span><textarea name="notes" rows="3" maxlength="500" placeholder="Tambahkan catatan bila perlu..."></textarea></label>
+              </div>
+            </div>
+            <aside class="soft-card sale-preview-card"><div class="preview-flower"><svg aria-hidden="true"><use href="#icon-flower"/></svg></div><p class="eyebrow">YOUR MEMBERSHIP</p><h2>Ringkasan</h2><div class="preview-list" id="sale-preview"><p class="empty-copy">Pilih paket untuk melihat detail membership.</p></div><button class="button button-primary sale-submit" type="submit">Simpan transaksi <svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></button></aside>
+          </form>
+        </section>
+        <section class="content-section"><div class="section-heading"><div><p class="eyebrow">YOUR JOURNEY SO FAR</p><h2>Riwayat sales</h2></div><span class="toolbar-result" id="sales-count"></span></div>
+          <form id="sales-filter" class="filter-row"><label class="compact-field"><span>Dari tanggal</span><input type="date" name="start"></label><label class="compact-field"><span>Sampai tanggal</span><input type="date" name="end"></label><label class="compact-field"><span>Member</span><select name="member_id"><option value="">Semua member</option></select></label><label class="compact-field"><span>Metode</span><select name="method"><option value="">Semua metode</option><option value="cash">Cash</option><option value="transfer">Transfer</option></select></label><button class="button button-secondary" type="submit">Terapkan</button><button class="button button-quiet" type="reset">Reset</button></form>
+          <div class="soft-card"><div class="table-wrap"><table class="data-table"><thead><tr><th>No. sales</th><th>Tanggal</th><th>Member</th><th>Paket</th><th>Metode</th><th>Total</th><th>Aksi</th></tr></thead><tbody id="sales-table"><tr><td colspan="7" class="empty-cell">Memuat sales...</td></tr></tbody></table></div></div>
+        </section>
+      </section>
+
+      <section class="view" id="view-journals" role="tabpanel" aria-labelledby="tab-journals" hidden>
+        <div class="page-heading"><div><p class="eyebrow">A GENTLE LOOK AT THE NUMBERS</p><h1>Journals & reports</h1><p class="subheading">Semua transaksi tercatat dengan tenang dan rapi.</p></div></div>
+        <div class="subnav" role="tablist" aria-label="Tampilan jurnal"><button type="button" class="subnav-tab is-active" id="subtab-general" role="tab" aria-selected="true" aria-controls="journal-general" data-journal-view="general">Jurnal umum</button><button type="button" class="subnav-tab" id="subtab-report" role="tab" aria-selected="false" aria-controls="journal-report" data-journal-view="report">Laporan pendapatan</button></div>
+        <section class="journal-pane is-visible" id="journal-general" role="tabpanel" aria-labelledby="subtab-general"><div class="content-section"><form id="journal-filter" class="filter-row"><label class="compact-field"><span>Dari tanggal</span><input type="date" name="start"></label><label class="compact-field"><span>Sampai tanggal</span><input type="date" name="end"></label><button class="button button-secondary" type="submit">Terapkan</button><button class="button button-quiet" type="reset">Reset</button></form><div class="soft-card"><div class="table-wrap"><table class="data-table"><thead><tr><th>No. jurnal</th><th>Tanggal</th><th>Deskripsi</th><th>Referensi</th><th>Balance</th><th>Aksi</th></tr></thead><tbody id="journals-table"><tr><td colspan="6" class="empty-cell">Memuat jurnal...</td></tr></tbody></table></div></div></div></section>
+        <section class="journal-pane" id="journal-report" role="tabpanel" aria-labelledby="subtab-report" hidden><div class="content-section"><div class="section-heading"><div><p class="eyebrow">INCOME, WITH A LITTLE CLARITY</p><h2>Ringkasan pendapatan</h2></div><div class="report-actions"><button class="button button-secondary" type="button" data-action="export-report">Export CSV</button><button class="button button-secondary" type="button" data-action="print-report">Print</button></div></div><form id="report-filter" class="filter-row"><label class="compact-field"><span>Dari tanggal</span><input type="date" name="start"></label><label class="compact-field"><span>Sampai tanggal</span><input type="date" name="end"></label><label class="compact-field"><span>Metode</span><select name="method"><option value="">Semua metode</option><option value="cash">Cash</option><option value="transfer">Transfer</option></select></label><button class="button button-primary" type="submit">Tampilkan laporan</button><button class="button button-quiet" type="reset">Reset</button></form><div class="report-summary" id="report-summary"><div class="report-total"><span>Total penjualan</span><strong>—</strong></div><div class="report-total"><span>Pendapatan (DPP)</span><strong>—</strong></div><div class="report-total"><span>PPN keluaran</span><strong>—</strong></div></div><div class="soft-card"><div class="table-wrap"><table class="data-table"><thead><tr><th>Tarif PPN</th><th>DPP</th><th>PPN</th><th>Total bruto</th></tr></thead><tbody id="report-tax-table"><tr><td colspan="4" class="empty-cell">Pilih periode laporan.</td></tr></tbody></table></div></div><div class="soft-card report-sales-wrap"><div class="table-wrap"><table class="data-table"><thead><tr><th>No. sales</th><th>Tanggal</th><th>Member</th><th>Total</th><th>DPP</th><th>PPN</th></tr></thead><tbody id="report-sales-table"><tr><td colspan="6" class="empty-cell">Pilih periode laporan.</td></tr></tbody></table></div></div></div></section>
+      </section>
+    </main>
+
+    <footer class="app-footer"><svg class="footer-flower" aria-hidden="true"><use href="#icon-flower"/></svg><p>made with ♡ for Healthy Yoga Studio</p><span>Find your flow, one breath at a time.</span></footer>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-heading"><div><p class="eyebrow" id="modal-eyebrow">A LITTLE FORM</p><h2 id="modal-title">Detail</h2></div><button class="icon-button" type="button" data-action="close-modal" aria-label="Tutup dialog"><svg class="icon" aria-hidden="true"><use href="#icon-close"/></svg></button></div>
+      <div class="modal-content" id="modal-content"></div>
+    </section>
+  </div>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
