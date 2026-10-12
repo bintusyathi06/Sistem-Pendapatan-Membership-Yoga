@@ -2,6 +2,19 @@
 
 Aplikasi membership dan jurnal akuntansi cash basis untuk UAT. Mode yang dipakai sekarang tidak membutuhkan Node.js: frontend vanilla memanggil Supabase PostgREST secara langsung.
 
+🌐 **Demo aplikasi:** [Buka Membership Yoga](https://bintusyathi06.github.io/Sistem-Pendapatan-Membership-Yoga/frontend/)
+
+## Identitas tugas
+
+| Keterangan | Detail |
+|---|---|
+| Nama | Bintusy Syathi Priwansyah |
+| NIM | 12030124140286 |
+| Mata Kuliah | Pengkodean dan Pemograman |
+| Kelas | D |
+| Dosen Pengampu | Dr. Totok Dewayanto, S.E., M.Si., Akt. |
+
+**Disusun untuk memenuhi Tugas Project UTS Pengkodean dan Pemograman.**
 ## Persiapan Supabase
 
 1. Buat atau buka proyek di Supabase.
